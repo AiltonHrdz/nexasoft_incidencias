@@ -38,6 +38,7 @@ List<Incidencia> buscar(String texto) {
     for (var i = 0; i < incidencias.length; i++) {
       if (incidencias[i].id == id) {
         incidencias[i].estado = estado;
+        await datos.guardar(incidencias);
         break;
       }
     }
